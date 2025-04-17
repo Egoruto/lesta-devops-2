@@ -7,13 +7,18 @@
 ### Запуск через Docker Compose
 
 ```bash
-docker compose up --build
+docker compose up --build -d
 ```
 
 После запуска доступны проверяем эндпоинты:
 
-- `http://localhost:5000/ping` — статус
-- `http://localhost:5000/count` — счётчик
+#### Через терминале
+- `curl http://localhost:5000/ping` — статус
+- `curl http://localhost:5000/count` — счётчик
+
+#### В браузере
+- `http://localhost:5000/count` - статус
+- `http://localhost:5000/count` - счетчик
 
 ## Структура проекта
 
@@ -41,20 +46,11 @@ my-flask-app/
 
 ### `GET /count`
 
-Инкрементирует Redis-счётчик и возвращает текущее значение:
+Счетчик посещений
 
 ```json
 { "counter": 1 }
 ```
-
----
-
-## Используемые технологии
-
-- [Python 3.9](https://www.python.org/)
-- [Flask](https://flask.palletsprojects.com/)
-- [Redis (Alpine)](https://hub.docker.com/_/redis)
-- [Docker Compose](https://docs.docker.com/compose/)
 
 ---
 
