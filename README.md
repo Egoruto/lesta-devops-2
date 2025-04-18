@@ -22,7 +22,7 @@ my-flask-app/
 docker compose up --build -d
 ```
 
-После запуска доступны проверяем эндпоинты:
+После запуска проверяем эндпоинты:
 
 - `curl http://localhost:5000/ping` — статус
 
