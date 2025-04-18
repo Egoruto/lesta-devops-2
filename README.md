@@ -25,28 +25,21 @@ docker compose up --build -d
 После запуска доступны проверяем эндпоинты:
 
 - `curl http://localhost:5000/ping` — статус
-- `curl http://localhost:5000/count` — счётчик
 
-
-##  API Эндпоинты
-
-### `GET /ping`
-
-Проверка, что сервис работает:
+Ответ:
 
 ```json
-{ "status": "ok" }
+{"status": "ok"}
 ```
 
----
+- `curl http://localhost:5000/count` — счётчик
 
-### `GET /count`
-
-Счетчик посещений
+Ответ:
 
 ```json
 { "counter": 1 }
 ```
+
 
 ---
 
