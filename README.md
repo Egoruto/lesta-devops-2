@@ -3,22 +3,6 @@
 Простое API-приложение на Flask с поддержкой Redis, упакованное в Docker. Предоставляет два эндпоинта: /ping и /count.
 
 ---
- 
-### Запуск через Docker Compose
-
-```bash
-docker compose up --build -d
-```
-
-После запуска доступны проверяем эндпоинты:
-
-#### Через терминале
-- `curl http://localhost:5000/ping` — статус
-- `curl http://localhost:5000/count` — счётчик
-
-#### В браузере
-- `http://localhost:5000/count` - статус
-- `http://localhost:5000/count` - счетчик
 
 ## Структура проекта
 
@@ -30,7 +14,19 @@ my-flask-app/
 ├── docker-compose.yml     # Оркестрация сервисов
 └── README.md              # Документация проекта
 ```
----
+
+--- 
+### Запуск через Docker Compose
+
+```bash
+docker compose up --build -d
+```
+
+После запуска доступны проверяем эндпоинты:
+
+- `curl http://localhost:5000/ping` — статус
+- `curl http://localhost:5000/count` — счётчик
+
 
 ##  API Эндпоинты
 
